@@ -6,6 +6,9 @@ const model = new TeachableMachine({
 });
 const DiscordClient = new Discord.Client();
 const prefix = "."
+DiscordClient.on('ready', () => {
+  console.log("Motherfuck. I gave you the ability to spin gold, and instead, you've spun pubic hair with shit in it, and gravel and corn...")
+})
 DiscordClient.on('message', message => {
   const args = message.content.slice(prefix.length).trim().split(' ');
   const command = args.shift().toLowerCase();
